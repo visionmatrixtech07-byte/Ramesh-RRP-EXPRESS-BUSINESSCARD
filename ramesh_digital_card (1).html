@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anke Ramesh Babu - RRP Express Logistics</title>
+    <style>
+        :root {
+            --primary-blue: #3485E8;
+            --primary-mint: #29C99A;
+            --dark-slate: #0f172a;
+            --gray-text: #475569;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, var(--primary-blue));
+            height: 160px;
+            position: relative;
+        }
+
+        .logo-container {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 4px solid white;
+            overflow: hidden;
+        }
+
+        .logo-container img {
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .profile-info {
+            text-align: center;
+            padding: 65px 25px 20px;
+        }
+
+        .profile-info h1 {
+            color: var(--dark-slate);
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .profile-info .title {
+            color: var(--primary-mint);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 2px;
+        }
+
+        .profile-info .company {
+            color: var(--gray-text);
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 13.5px;
+            color: #334155;
+            line-height: 1.6;
+            text-align: center;
+            border-left: 4px solid var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 25px 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--dark-slate);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .contact-item:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(52, 133, 232, 0.1);
+        }
+
+        .icon-circle {
+            background: #eff6ff;
+            color: var(--primary-blue);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .icon-circle svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-label {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .item-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark-slate);
+            word-break: break-word;
+        }
+
+        .save-btn-container {
+            padding: 0 25px 30px;
+        }
+
+        .save-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-blue), #1e40af);
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(52, 133, 232, 0.3);
+            gap: 8px;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(52, 133, 232, 0.4);
+        }
+
+        .save-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo-container">
+                <!-- VERY IMPORTANT: Keep "RRP EXPRESS LOGO.png" in the same folder as this HTML file -->
+                <img src="RRP EXPRESS LOGO.png" alt="RRP Express Logo">
+            </div>
+        </div>
+        
+        <!-- Profile Info -->
+        <div class="profile-info">
+            <h1>Anke Ramesh Babu</h1>
+            <div class="title">Director</div>
+            <div class="company">RRP Express Logistics Pvt Ltd</div>
+            
+            <div class="description">
+                Tech-enabled Pan-India transport solutions specializing in FTL, Solid, Liquid, and ODC freight management. <strong>GST RCM Compliant & Recognized by Startup India.</strong>
+            </div>
+        </div>
+        
+        <!-- Contact Links -->
+        <div class="contact-grid">
+            <!-- Primary Mobile -->
+            <a href="tel:+919000004436" class="contact-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+                </div>
+                <div class="item-details">
+                    <span class="item-label">Primary Mobile</span>
+                    <span class="item-value">+91 9000004436</span>
+                </div>
+            </a>
+
+            <!-- Secondary Mobile -->
+            <a href="tel:+919014884668" class="contact-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="item-details">
+                    <span class="item-label">Secondary Mobile</span>
+                    <span class="item-value">+91 9014884668</span>
+                </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:director@rrpexpresslogistics.com" class="contact-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="item-details">
+                    <span class="item-label">Corporate Email</span>
+                    <span class="item-value">director@rrpexpresslogistics.com</span>
+                </div>
+            </a>
+
+            <!-- Website -->
+            <a href="https://www.rrpexpresslogistics.com" target="_blank" class="contact-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div class="item-details">
+                    <span class="item-label">Website</span>
+                    <span class="item-value">www.rrpexpresslogistics.com</span>
+                </div>
+            </a>
+
+            <!-- Address -->
+            <div class="contact-item" style="cursor: default;">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="item-details">
+                    <span class="item-label">Headquarters</span>
+                    <span class="item-value" style="font-size: 13.5px; line-height: 1.4;">#6-4-994, Near 80ft Road,<br>Maruthi Nagar, Anantapuramu,<br>AP - 515001</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Save to Contacts Button -->
+        <div class="save-btn-container">
+            <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Anke%20Ramesh%20Babu%0AORG:RRP%20Express%20Logistics%20Pvt%20Ltd%0ATITLE:Director%0ATEL;TYPE=CELL:+919000004436%0ATEL;TYPE=WORK:+919014884668%0AEMAIL:director@rrpexpresslogistics.com%0AURL:https://www.rrpexpresslogistics.com%0AEND:VCARD" download="Anke_Ramesh_Babu_Contact.vcf" class="save-btn">
+                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Save to Contacts
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
